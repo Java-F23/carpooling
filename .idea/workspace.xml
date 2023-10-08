@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e26320a9-bd97-4fa8-ac77-4b767fc8259b" name="Changes" comment="Init">
-      <change afterPath="$PROJECT_DIR$/src/Models/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Captain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Ride.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Rider.java" afterDir="false" />
+    <list default="true" id="e26320a9-bd97-4fa8-ac77-4b767fc8259b" name="Changes" comment="Added Models">
+      <change afterPath="$PROJECT_DIR$/src/Filters/RideFilters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/BaseUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/CarType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repositories/GenericRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repositories/RideRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Captain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Captain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Ride.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Rider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Rider.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +53,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Models" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696707741953</updated>
-      <workItem from="1696707742707" duration="5143000" />
+      <workItem from="1696707742707" duration="10798000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -75,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696708020269</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Models">
+      <option name="closed" value="true" />
+      <created>1696719408344</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696719408344</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +111,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Added Models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Models" />
   </component>
 </project>

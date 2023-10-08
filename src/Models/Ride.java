@@ -2,17 +2,19 @@ package Models;
 
 import java.util.ArrayList;
 
-public class Ride {
+public class Ride extends BaseEntity{
     private Captain captain;
     private ArrayList<Rider> riders;
     private static int numberOfRiders;
     private ArrayList<Location> route;
     private int startTime;
 
-    public Ride(Location startRoute, Captain captain) {
-        this.route = new ArrayList<Location>(captain.getCar().getSeats());
+    public Ride(int id, Location startRoute, Captain captain, int startTime) {
+        super(id);
+        this.route = new ArrayList<Location>(captain.getCar().getCarType().getNumberOfseats() + 2);
         this.route.add(startRoute);
         this.captain = captain;
+        this.riders = new ArrayList<Rider>();
     }
 
     public Captain getCaptain() {

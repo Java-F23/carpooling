@@ -1,10 +1,28 @@
 package Models;
 
-public class Car {
+public class Car extends BaseEntity{
     private String plate;
-    private int seats;
-    private String brand;
     private String color;
+    private CarType carType;
+
+
+
+    public Car(int id, String plate, CarType carType, String brand, String color) {
+        super(id);
+        this.plate = plate;
+        this.carType = carType;
+        this.color = color;
+    }
+
+
+    public CarType getCarType() {
+        return carType;
+    }
+
+    public void setCarType(CarType carType) {
+        this.carType = carType;
+    }
+
 
     public String getPlate() {
         return plate;
@@ -14,21 +32,7 @@ public class Car {
         this.plate = plate;
     }
 
-    public int getSeats() {
-        return seats;
-    }
 
-    public void setSeats(int seats) {
-        this.seats = seats;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
 
     public String getColor() {
         return color;

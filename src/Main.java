@@ -1,18 +1,28 @@
+import Applications.Admin;
+import Models.*;
+import Services.CaptainService;
+import Services.CarService;
+import Services.RideService;
+import Services.RiderService;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        RideService rideService = new RideService();
+        CaptainService captainService = new CaptainService();
+        RiderService riderService = new RiderService();
+        Admin adminApp = new Admin(rideService, captainService, riderService);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        // Example usage
+        adminApp.addRider(1, "John Doe", "john@example.com", "1234567890");
+        adminApp.addCaptain(1, "Captain Smith", "captain@example.com", "0987654321", new Car(1, "ABC123", new CarType(1, 4, "Toyota"), "Red"));
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        Rider rider = adminApp.getRiderById(1);
+        Captain captain = adminApp.getCaptainById(1);
 
-        }
+        adminApp.createRide(1, new Location(0, 0, "City A"), captain, 123456789);
+        adminApp.addRiderToRide(1, rider);
+        adminApp.manageRideReservations(1);
     }
 }

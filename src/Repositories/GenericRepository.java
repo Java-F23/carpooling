@@ -13,6 +13,14 @@ public class GenericRepository<T extends BaseEntity> {
     public void addData(T value){
         data.add(value);
     }
+    public T getById(int id) {
+        for (T obj : data) {
+            if (obj != null && obj.getId() == id) {
+                return obj;
+            }
+        }
+        return null; // Object with the specified ID not found
+    }
     public void removeById(int id) {
         T objectToRemove = null;
         for (T obj : data) {

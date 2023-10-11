@@ -7,7 +7,7 @@ public class Car extends BaseEntity{
 
 
 
-    public Car(int id, String plate, CarType carType, String brand, String color) {
+    public Car(int id, String plate, CarType carType, String color) {
         super(id);
         this.plate = plate;
         this.carType = carType;

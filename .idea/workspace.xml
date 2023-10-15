@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b8177df-ff74-4e24-a32f-7bef060f6ee1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Applications/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Applications/RiderApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/CaptainService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/CarService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/RideService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/RiderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="2b8177df-ff74-4e24-a32f-7bef060f6ee1" name="Changes" comment="Added applications">
+      <change afterPath="$PROJECT_DIR$/src/Models/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/PaymentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Applications/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Applications/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Applications/RiderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Applications/RiderApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/GenericRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/GenericRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Ride.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Rider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Rider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/RideRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/RideRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/RideService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/RideService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/RiderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/RiderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +63,25 @@
       <updated>1696987516959</updated>
       <workItem from="1696987518071" duration="4835000" />
       <workItem from="1697029719856" duration="871000" />
-      <workItem from="1697056886729" duration="2338000" />
+      <workItem from="1697056886729" duration="3043000" />
+      <workItem from="1697136480008" duration="19632000" />
     </task>
+    <task id="LOCAL-00001" summary="Added applications">
+      <option name="closed" value="true" />
+      <created>1697060900952</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697060900952</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added applications" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added applications" />
   </component>
 </project>

@@ -2,6 +2,7 @@ package Applications;
 
 import Filters.RideFilters;
 import Models.*;
+import Services.PaymentService;
 import Services.RideService;
 import Services.RiderService;
 
@@ -11,11 +12,13 @@ public class RiderApplication {
     private RideService rideService;
     private RiderService riderService;
     private int currentRiderId;
+    private PaymentService paymentService;
 
-    public RiderApplication(RideService rideService, RiderService rrs, int currentRiderId) {
+    public RiderApplication(RideService rideService, RiderService rrs, int currentRiderId, PaymentService paymentService) {
         this.rideService = rideService;
         this.riderService = rrs;
         this.currentRiderId = currentRiderId;
+        this.paymentService = paymentService;
     }
 
     public ArrayList<Ride> getRidesBookedByRider(int riderId) {
@@ -32,7 +35,12 @@ public class RiderApplication {
     }
 
     public void cancelRide(int rideId) {
-        rideService.removeRiderFromRide(rideId, currentRiderId);
+        Ride r = rideService.getRideById(rideId);
+        if(r!=null){
+            rideService.cancelReservation(currentRiderId, r);
+        }else{
+            System.out.println("Ride Not found");
+        }
     }
 
     public void viewAvailableRides() {
@@ -45,8 +53,9 @@ public class RiderApplication {
             System.out.println("--------");
         }
     }
-    public void bookRide(int rideId, Rider rider) {
+    public void bookRide(int rideId) {
         Ride ride = rideService.getRideById(rideId);
+        Rider rider = riderService.getRiderById(currentRiderId);
         if (ride != null) {
             int availableSeats = ride.getCaptain().getCar().getCarType().getNumberOfseats() - ride.getRiders().size();
             if (availableSeats > 0) {
@@ -99,5 +108,40 @@ public class RiderApplication {
         } else {
             System.out.println("Ride not found.");
         }
+    }
+
+    public void makePayment(int rideId, String paymentType) {
+        Ride ride = rideService.getRideById(rideId);
+        if (ride != null && ride.getRiders().contains(riderService.getRiderById(currentRiderId))) {
+            if (ride.getPayments().get(ride.getRiders().indexOf(riderService.getRiderById(currentRiderId)))) {
+                System.out.println("Payment already made for this ride.");
+            } else {
+                boolean paymentStatus = paymentService.pay(rideId, currentRiderId, paymentType);
+                if (paymentStatus) {
+                    System.out.println("Payment successful! Enjoy your ride!");
+                } else {
+                    System.out.println("Payment failed. Please try again.");
+                }
+            }
+        } else {
+            System.out.println("Invalid ride ID or you are not a part of this ride.");
+        }
+    }
+
+    public void viewRides(){
+        Rider rider = riderService.getRiderById(currentRiderId);
+        rideService.printRidesByRider(rider);
+    }
+
+    public void rateRide(int rideId, int rating) {
+        Ride ride = rideService.getRideById(rideId);
+        if (ride != null) {
+            rideService.rateRide(rideId, currentRiderId, rating);
+        } else {
+            System.out.println("Ride not found.");
+        }
+    }
+    public void viewRiderRidesWithPayment() {
+        rideService.viewRiderRidesWithPayment(currentRiderId);
     }
 }

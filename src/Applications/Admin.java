@@ -13,12 +13,44 @@ public class Admin {
     private RideService rideService;
 
     public Admin(RideService rs, CaptainService cs, RiderService rrs) {
-        this.riderService = new RiderService();
-        this.captainService = new CaptainService();
-        this.rideService = new RideService();
+        this.riderService = rrs;
+        this.captainService = cs;
+        this.rideService = rs;
     }
     public Rider getRiderById(int id) {
         return riderService.getRiderById(id);
+    }
+    public void printRiders(){
+        ArrayList<Rider> riders= riderService.getAllRiders();
+        for(Rider r : riders){
+            System.out.println(r.getName() + " " + r.getId());
+        }
+    }
+
+    public void printRideStatistics() {
+        ArrayList<Ride> rides = rideService.getAllRides();
+        for (Ride ride : rides) {
+            int totalSeats = ride.getCaptain().getCar().getCarType().getNumberOfseats();
+            int bookedSeats = ride.getRiders().size();
+            int availableSeats = totalSeats - bookedSeats;
+            int paidSeats = 0;
+
+            for (Boolean paymentStatus : ride.getPayments()) {
+                if (paymentStatus) {
+                    paidSeats++;
+                }
+            }
+
+            System.out.println("Ride ID: " + ride.getId());
+            System.out.println("Total Seats: " + totalSeats);
+            System.out.println("Booked Seats: " + bookedSeats);
+            System.out.println("Available Seats: " + availableSeats);
+            System.out.println("Paid Seats: " + paidSeats);
+            System.out.println("--------------------------");
+        }
+    }
+    public void RemoveRide(int rideId){
+        rideService.removeRideById(rideId);
     }
 
     public Captain getCaptainById(int id) {
@@ -29,8 +61,8 @@ public class Admin {
         return rideService.getRideById(id);
     }
 
-    public void addRider(int id, String name, String email, String phoneNumber) {
-        Rider rider = new Rider(id, name, email, phoneNumber);
+    public void addRider(int id, String name, String email, String phoneNumber, Location riderLoc) {
+        Rider rider = new Rider(id, name, email, phoneNumber, riderLoc);
         riderService.addRiders(rider);
         System.out.println("Rider added successfully.");
     }
@@ -51,8 +83,8 @@ public class Admin {
         System.out.println("Captain updated successfully.");
     }
 
-    public void createRide(int rideId, Location startRoute, Captain captain, int startTime) {
-        rideService.createRide(rideId, startRoute, captain, startTime);
+    public void createRide(int rideId, Location startRoute, Captain captain, int startTime, float price) {
+        rideService.createRide(rideId, startRoute, captain, startTime, price);
         System.out.println("Ride created successfully.");
     }
 

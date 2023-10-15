@@ -38,6 +38,8 @@ public class RiderService {
         return repo.getAll();
     }
 
+
+
     public ArrayList<Rider> searchRidersByCriteria(String searchCriteria) {
         ArrayList<Rider> matchingRiders = new ArrayList<>();
         for (Rider rider : repo.getAll()) {

@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b8177df-ff74-4e24-a32f-7bef060f6ee1" name="Changes" comment="Added applications">
-      <change afterPath="$PROJECT_DIR$/readMe.md" afterDir="false" />
+    <list default="true" id="2b8177df-ff74-4e24-a32f-7bef060f6ee1" name="Changes" comment="Added Readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Applications/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Applications/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -54,7 +59,7 @@
       <workItem from="1696987518071" duration="4835000" />
       <workItem from="1697029719856" duration="871000" />
       <workItem from="1697056886729" duration="3043000" />
-      <workItem from="1697136480008" duration="19934000" />
+      <workItem from="1697136480008" duration="20617000" />
     </task>
     <task id="LOCAL-00001" summary="Added applications">
       <option name="closed" value="true" />
@@ -72,7 +77,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697370858250</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Readme">
+      <option name="closed" value="true" />
+      <created>1697371171540</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697371171540</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,6 +93,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added applications" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added applications" />
+    <MESSAGE value="Added Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Readme" />
   </component>
 </project>

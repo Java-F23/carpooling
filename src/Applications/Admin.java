@@ -84,7 +84,13 @@ public class Admin {
     }
 
     public void createRide(int rideId, Location startRoute, Captain captain, int startTime, float price) {
-        rideService.createRide(rideId, startRoute, captain, startTime, price);
+        if(captain!=null) {
+            rideService.createRide(rideId, startRoute, captain, startTime, price);
+        }
+        else{
+            System.out.println("Captain does not exist");
+        }
+
         System.out.println("Ride created successfully.");
     }
 

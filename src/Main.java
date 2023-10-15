@@ -22,6 +22,8 @@ public class Main {
         adminApp.addRider(3, "Emma White", "emma@example.com", "3334445555", new Location(25, 25, "F"));
         adminApp.addRider(4, "Liam Brown", "liam@example.com", "4445556666", new Location(30, 30, "G"));
         adminApp.addRider(5, "Olivia Davis", "olivia@example.com", "5556667777", new Location(35, 35, "H"));
+        adminApp.addRider(6, "Sam Davis", "olivia@example.com", "1234567888", new Location(35, 35, "H"));
+        adminApp.addRider(7, "Mo Davis", "olivia@example.com", "111000111000", new Location(35, 35, "H"));
 
         adminApp.addCaptain(1, "Captain Smith", "captain@example.com", "0987654321", new Car(1, "ABC123", new CarType(1, 4, "Toyota"), "Red"));
         adminApp.addCaptain(3, "Captain Johnson", "johnson@example.com", "9876543210", new Car(3, "JKL321", new CarType(3, 6, "Chevrolet"), "Silver"));
@@ -73,6 +75,10 @@ public class Main {
         // Story 7
         System.out.println("-------- Story 7 --------");
         riderApp.bookRide(1);
+        RiderApplication riderApp2 = new RiderApplication(rideService, riderService, 3, paymentService);
+        riderApp2.bookRide(1);
+        RiderApplication riderApp3 = new RiderApplication(rideService, riderService, 5, paymentService);
+        riderApp3.bookRide(1);
         System.out.println("------------------------");
 
         // Story 8
@@ -97,10 +103,15 @@ public class Main {
 
         // Story 13
         System.out.println("-------- Story 13 --------");
+        System.out.println("Rider 1");
         riderApp.viewRiderRidesWithPayment();
+        System.out.println("Rider 3");
+        riderApp2.viewRiderRidesWithPayment();
+        System.out.println("Rider 5");
+        riderApp2.viewRiderRidesWithPayment();
         System.out.println("------------------------");
         // Story 14
-        System.out.println("-------- Story 13 --------");
+        System.out.println("-------- Story 14 --------");
         adminApp.printRideStatistics();
         System.out.println("------------------------");
     }

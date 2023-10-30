@@ -4,10 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b8177df-ff74-4e24-a32f-7bef060f6ee1" name="Changes" comment="Added Readme">
+    <list default="true" id="2b8177df-ff74-4e24-a32f-7bef060f6ee1" name="Changes" comment="added more test cases">
+      <change afterPath="$PROJECT_DIR$/src/Applications/CaptainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/AddRideFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/FrameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/LoginFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/LoginListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/LogoutListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/MainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/SignUpFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/ViewRideStatisticsFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/WelcomeComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/welcome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Seeders/Seeder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Applications/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Applications/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Applications/RiderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Applications/RiderApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/BaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/BaseUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Captain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Captain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Ride.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Rider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Rider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/RideRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/RideRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/CaptainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/CaptainService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/RideService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/RideService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/RiderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/RiderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,12 +41,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,6 +74,20 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\elsha\IdeaProjects\carpooling\src\GUI" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="carpool" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="carpooling" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,7 +99,11 @@
       <workItem from="1696987518071" duration="4835000" />
       <workItem from="1697029719856" duration="871000" />
       <workItem from="1697056886729" duration="3043000" />
-      <workItem from="1697136480008" duration="20617000" />
+      <workItem from="1697136480008" duration="21527000" />
+      <workItem from="1697982229685" duration="34000" />
+      <workItem from="1698323795973" duration="19402000" />
+      <workItem from="1698478396028" duration="30715000" />
+      <workItem from="1698610520239" duration="10625000" />
     </task>
     <task id="LOCAL-00001" summary="Added applications">
       <option name="closed" value="true" />
@@ -85,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697371171540</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added Readme">
+      <option name="closed" value="true" />
+      <created>1697387353927</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697387353927</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

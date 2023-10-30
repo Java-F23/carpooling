@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class RiderService {
     private GenericRepository<Rider> repo;
 
-    public RiderService() {
-        this.repo = new GenericRepository<Rider>();
+    public RiderService(GenericRepository<Rider> riderRepo) {
+        this.repo = riderRepo;
     }
 
     public void addRiders(Rider rider) {
@@ -49,6 +49,16 @@ public class RiderService {
             }
         }
         return matchingRiders;
+    }
+
+    public Rider getRiderByPhoneNumber(String phoneNumber) {
+        ArrayList<Rider> riders = repo.getAll();
+        for (Rider rider : riders) {
+            if (rider.getPhoneNumber().equals(phoneNumber)) {
+                return rider;
+            }
+        }
+        return null; // Rider not found for the given phone number
     }
 }
 

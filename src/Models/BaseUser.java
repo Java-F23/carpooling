@@ -5,12 +5,14 @@ public class BaseUser extends BaseEntity {
     private String name;
     private String email;
     private String phoneNumber;
+    private String password;
 
-    public BaseUser(int id, String name, String email, String phoneNumber) {
+    public BaseUser(int id, String name, String email, String phoneNumber, String password) {
         super(id);
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.password = password;
     }
 
 
@@ -34,5 +36,13 @@ public class BaseUser extends BaseEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

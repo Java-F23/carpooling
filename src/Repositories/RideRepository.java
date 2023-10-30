@@ -10,7 +10,7 @@ public class RideRepository extends GenericRepository<Ride>{
     public ArrayList<Ride> getByFilter(RideFilters criteria) {
         ArrayList<Ride> filteredRides = new ArrayList<Ride>();
         for(Ride r : data){
-            if(!criteria.Region.isEmpty()  && criteria.startTime != 0){
+            if(criteria.Region!=null && !criteria.Region.isEmpty()  && criteria.startTime != 0){
                 if(criteria.Region.equals(r.getRoute().get(0).getRegion()) && criteria.startTime==r.getStartTime()){
                     filteredRides.add(r);
                 }
@@ -18,7 +18,7 @@ public class RideRepository extends GenericRepository<Ride>{
                 if(criteria.startTime == r.getStartTime()){
                     filteredRides.add(r);
                 }
-            } else if (!criteria.Region.isEmpty()) {
+            } else if (criteria.Region!=null && !criteria.Region.isEmpty()) {
                 if(criteria.Region.equals((r.getRoute().get(0).getRegion()))){
                     filteredRides.add(r);
                 }

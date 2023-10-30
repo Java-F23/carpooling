@@ -8,13 +8,14 @@ import Models.Rider;
 import Repositories.RideRepository;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RideService {
     private RideRepository rideRepository;
     private RiderService riderService;
 
-    public RideService(RiderService rs) {
-        this.rideRepository = new RideRepository();
+    public RideService(RiderService rs, RideRepository rideRepo) {
+        this.rideRepository = rideRepo;
         this.riderService = rs;
     }
 
@@ -129,4 +130,57 @@ public class RideService {
     public void removeRideById(int rideId) {
         rideRepository.removeById(rideId);
     }
+
+    public ArrayList<Ride> getRidesByCaptain(Captain captain) {
+        ArrayList<Ride> ridesByCaptain = new ArrayList<>();
+        for (Ride ride : rideRepository.getAll()) {
+            if (ride.getCaptain().equals(captain)) {
+                ridesByCaptain.add(ride);
+            }
+        }
+        return ridesByCaptain;
+    }
+
+    public List<String> getUsersWhoPaid(int rideId) {
+        Ride ride = rideRepository.getById(rideId);
+        List<String> paidUsers = new ArrayList<>();
+
+        if (ride != null) {
+            for (int i = 0; i < ride.getRiders().size(); i++) {
+                if (ride.getPayments().get(i)) {
+                    Rider rider = ride.getRiders().get(i);
+                    paidUsers.add(rider.getName());
+                }
+            }
+        }
+
+        return paidUsers;
+    }
+
+    public List<String> getUsersWhoDidNotPay(int rideId) {
+        Ride ride = rideRepository.getById(rideId);
+        List<String> unpaidUsers = new ArrayList<>();
+
+        if (ride != null) {
+            for (int i = 0; i < ride.getRiders().size(); i++) {
+                if (!ride.getPayments().get(i)) {
+                    Rider rider = ride.getRiders().get(i);
+                    unpaidUsers.add(rider.getName());
+                }
+            }
+        }
+
+        return unpaidUsers;
+    }
+
+    public int getTotalNumberOfUsers(int rideId) {
+        Ride ride = rideRepository.getById(rideId);
+
+        if (ride != null) {
+            return ride.getRiders().size();
+        }
+
+        return 0;
+    }
+
 }

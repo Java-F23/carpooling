@@ -61,8 +61,8 @@ public class Admin {
         return rideService.getRideById(id);
     }
 
-    public void addRider(int id, String name, String email, String phoneNumber, Location riderLoc) {
-        Rider rider = new Rider(id, name, email, phoneNumber, riderLoc);
+    public void addRider(int id, String name, String email, String phoneNumber, Location riderLoc, String password) {
+        Rider rider = new Rider(id, name, email, phoneNumber, riderLoc, password);
         riderService.addRiders(rider);
         System.out.println("Rider added successfully.");
     }
@@ -72,9 +72,9 @@ public class Admin {
         System.out.println("Rider updated successfully.");
     }
 
-    public void addCaptain(int id, String name, String email, String phoneNumber, Car car) {
-        Captain captain = new Captain(id, name, email, phoneNumber, car);
-        captainService.addCaptain(id, name, email, phoneNumber, car);
+    public void addCaptain(int id, String name, String email, String phoneNumber, Car car, String password) {
+        Captain captain = new Captain(id, name, email, phoneNumber, car, password);
+        captainService.addCaptain(id, name, email, phoneNumber, car, password);
         System.out.println("Captain added successfully.");
     }
 

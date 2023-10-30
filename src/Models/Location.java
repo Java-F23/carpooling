@@ -18,6 +18,9 @@ public class Location {
         this.lat = lat;
         this.region = region;
     }
+    public Location(String region){
+        this.region = region;
+    }
 
     public int getLng() {
         return lng;

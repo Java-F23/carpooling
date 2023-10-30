@@ -23,6 +23,7 @@ public class Ride extends BaseEntity{
         this.price = price;
         this.route.add(startRoute);
         this.captain = captain;
+        this.startTime = startTime;
     }
 
     public ArrayList<Boolean> getPayments() {
@@ -81,5 +82,13 @@ public class Ride extends BaseEntity{
 
     public void setStartTime(int startTime) {
         this.startTime = startTime;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
     }
 }

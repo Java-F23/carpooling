@@ -34,6 +34,24 @@ public class RiderApplication {
         return ridesBookedByRider;
     }
 
+
+    public ArrayList<Ride> getAvailableRidesForRider() {
+        Rider rider = riderService.getRiderById(currentRiderId); // Get the current rider
+        ArrayList<Ride> availableRides = new ArrayList<>();
+        ArrayList<Ride> rides = rideService.getAllRides();
+
+        for (Ride ride : rides) {
+            // Check if the rider is not part of the ride and there are available seats
+            if (!ride.getRiders().contains(rider)) {
+                int availableSeats = ride.getCaptain().getCar().getCarType().getNumberOfseats() - ride.getRiders().size();
+                if (availableSeats > 0) {
+                    availableRides.add(ride);
+                }
+            }
+        }
+        return availableRides;
+    }
+
     public void cancelRide(int rideId) {
         Ride r = rideService.getRideById(rideId);
         if(r!=null){
@@ -69,20 +87,31 @@ public class RiderApplication {
         }
     }
 
-    public void searchRidesByFilter(RideFilters filters) {
+    public ArrayList<Ride> searchAvailableRidesByFilter(RideFilters filters) {
         ArrayList<Ride> filteredRides = rideService.filterRides(filters);
-        if (filteredRides.isEmpty()) {
-            System.out.println("No rides found matching the specified filters.");
-        } else {
-            System.out.println("Rides matching the specified filters:");
-            for (Ride ride : filteredRides) {
-                int availableSeats = ride.getCaptain().getCar().getCarType().getNumberOfseats() - ride.getRiders().size();
-                System.out.println("Ride ID: " + ride.getId());
-                System.out.println("Start Time: " + ride.getStartTime());
-                System.out.println("Available Seats: " + availableSeats);
-                System.out.println("--------");
+        ArrayList<Ride> availableRides = new ArrayList<>();
+
+        for (Ride ride : filteredRides) {
+            int availableSeats = ride.getCaptain().getCar().getCarType().getNumberOfseats() - ride.getRiders().size();
+            if (availableSeats > 0) {
+                availableRides.add(ride);
             }
         }
+        return availableRides;
+    }
+
+    public boolean hasRiderPaidForRide(int rideId) {
+        Ride ride = rideService.getRideById(rideId);
+        if (ride != null) {
+            // Get the index of the rider in the ride's riders list
+            int riderIndex = ride.getRiders().indexOf(riderService.getRiderById(currentRiderId));
+            if (riderIndex != -1) {
+                // Check if the corresponding payment flag is set to true
+                return ride.getPayments().get(riderIndex);
+            }
+        }
+        // If the ride or rider is not found, or the payment flag is false, return false
+        return false;
     }
 
     public void viewRideInformation(int rideId) {

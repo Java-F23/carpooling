@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b8177df-ff74-4e24-a32f-7bef060f6ee1" name="Changes" comment="sprint 2">
-      <change afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/readMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Applications/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Applications/CaptainApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Applications/RiderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Applications/RiderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/FrameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/FrameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/SignUpFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SignUpFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Rider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Rider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/GenericRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/GenericRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/RideRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/RideRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/CaptainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/CaptainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/CarService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/RideService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/RideService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/RiderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/RiderService.java" afterDir="false" />
-    </list>
+    <list default="true" id="2b8177df-ff74-4e24-a32f-7bef060f6ee1" name="Changes" comment="sprint 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +20,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

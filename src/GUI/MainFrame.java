@@ -13,6 +13,7 @@ import com.sun.tools.javac.Main;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainFrame extends JFrame {
@@ -24,7 +25,7 @@ public class MainFrame extends JFrame {
     private Rider rider;
     private Captain captain;
     private JTextField startTimeFilter;
-    ArrayList<Ride> availableRides;
+    List<Ride> availableRides;
     private RiderApplication riderApplication;
     private RideService rs;
 
@@ -193,7 +194,7 @@ public class MainFrame extends JFrame {
 
     private void viewMyRides() {
         // Handle my rides button click
-        ArrayList<Ride> myRides = riderApplication.getRidesBookedByRider(rider.getId());
+        List<Ride> myRides = riderApplication.getRidesBookedByRider(rider.getId());
 
         JPanel rideCardsPanel = new JPanel();
         rideCardsPanel.setLayout(new BoxLayout(rideCardsPanel, BoxLayout.Y_AXIS));
@@ -252,7 +253,7 @@ public class MainFrame extends JFrame {
         card.setPreferredSize(new Dimension(700, 150)); // Increased card height for better visibility
 
         JLabel rideInfoLabel = new JLabel("<html><div style='text-align: center; font-size: 18px; color: #333333;'>" +
-                "Region: " + ride.getRoute().get(0).getRegion() +
+                "Region: " + ride.getRoute().get(0).toString()+
                 " | Start Time: " + ride.getStartTime() + ":00" +
                 " | Price: $" + ride.getPrice() +
                 "</div></html>");

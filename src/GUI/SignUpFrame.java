@@ -1,8 +1,11 @@
 package GUI;
-
-import Models.*;
+import Models.Car;
+import Models.CarType;
+import Models.Location;
 import Services.UserService;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -74,61 +77,70 @@ public class SignUpFrame extends JFrame {
         add(captainRadioButton);
         add(captainPanel);
 
-        riderRadioButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                captainPanel.setVisible(false);
-            }
-        });
-
-        captainRadioButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                captainPanel.setVisible(true);
-            }
-        });
+        riderRadioButton.addActionListener(e -> captainPanel.setVisible(false));
+        captainRadioButton.addActionListener(e -> captainPanel.setVisible(true));
 
         JButton signupButton = new JButton("Sign Up");
-        signupButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String name = nameField.getText();
-                String email = emailField.getText();
-                String phoneNumber = phoneNumberField.getText();
-                char[] password = passwordField.getPassword();
-                String passStr = new String(password);
+        signupButton.addActionListener(e -> {
+            String name = nameField.getText();
+            String email = emailField.getText();
+            String phoneNumber = phoneNumberField.getText();
+            char[] password = passwordField.getPassword();
+            String passStr = new String(password);
 
-                if (riderRadioButton.isSelected()) {
-                    Location riderLocation = new Location("Default Region"); // Set default region for rider
-                    if(userService.doesUserExist(phoneNumber)){
-                        JOptionPane.showMessageDialog(null, "User Already exists");
+            // Validate email and phone number
+            if (!isValidEmail(email)) {
+                JOptionPane.showMessageDialog(null, "Invalid email format!");
+                return;
+            }
 
-                    }
-                     userService.signUp(name, email, phoneNumber, passStr, riderLocation);
-                    JOptionPane.showMessageDialog(null, "Rider signed up successfully!");
-                } else if (captainRadioButton.isSelected()) {
-                    String plate = plateField.getText();
-                    String color = colorField.getText();
-                    String brand = carBrandField.getText();
-                    if (!plate.isEmpty() && !color.isEmpty() && !brand.isEmpty()) {
-                        CarType carType = new CarType(0, 4, brand); // Assuming default number of seats is 4
-                        Car car = new Car(0, plate, carType, color);
-                        if(userService.doesUserExist(phoneNumber)){
-                            JOptionPane.showMessageDialog(null, "User Already exists");
+            if (!isValidPhoneNumber(phoneNumber)) {
+                JOptionPane.showMessageDialog(null, "Invalid phone number format!");
+                return;
+            }
 
-                        }
-                        userService.signUp(name, email, phoneNumber,passStr, car);
-                        JOptionPane.showMessageDialog(null, "Captain signed up successfully!");
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Please fill in all the captain details!");
-                    }
-                } else {
-                    JOptionPane.showMessageDialog(null, "Please select user type!");
+            if (riderRadioButton.isSelected()) {
+                Location riderLocation = new Location("Default Region");
+                if (userService.doesUserExist(phoneNumber)) {
+                    JOptionPane.showMessageDialog(null, "User Already exists");
                 }
+                userService.signUp(name, email, phoneNumber, passStr, riderLocation);
+                JOptionPane.showMessageDialog(null, "Rider signed up successfully!");
+            } else if (captainRadioButton.isSelected()) {
+                String plate = plateField.getText();
+                String color = colorField.getText();
+                String brand = carBrandField.getText();
+                if (!plate.isEmpty() && !color.isEmpty() && !brand.isEmpty()) {
+                    CarType carType = new CarType(0, 4, brand); // Assuming default number of seats is 4
+                    Car car = new Car(0, plate, carType, color);
+                    if (userService.doesUserExist(phoneNumber)) {
+                        JOptionPane.showMessageDialog(null, "User Already exists");
+                    }
+                    userService.signUp(name, email, phoneNumber, passStr, car);
+                    JOptionPane.showMessageDialog(null, "Captain signed up successfully!");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Please fill in all the captain details!");
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Please select user type!");
             }
         });
 
         add(signupButton);
         setVisible(true);
+    }
+
+    private boolean isValidEmail(String email) {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
+
+    private boolean isValidPhoneNumber(String phoneNumber) {
+        String phoneRegex = "^\\d{10}$";
+        Pattern pattern = Pattern.compile(phoneRegex);
+        Matcher matcher = pattern.matcher(phoneNumber);
+        return matcher.matches();
     }
 }

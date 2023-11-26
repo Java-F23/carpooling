@@ -1,17 +1,13 @@
 
-import Applications.Admin;
-import Applications.RiderApplication;
-import Filters.RideFilters;
-import GUI.FrameController;
-import GUI.MainFrame;
-import GUI.WelcomeComponent;
-import Models.*;
-import Services.*;
+import Controller.Controller;
 
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        new FrameController();
+        // Create an instance of Controller to set up and initialize the application
+        Controller controller = new Controller();
+
+        // Run the application
+        //controller.runApplication();
     }
 }

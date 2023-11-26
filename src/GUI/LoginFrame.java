@@ -28,23 +28,21 @@ public class LoginFrame extends JFrame {
         passwordField = new JPasswordField(15);
         loginButton = new JButton("Login");
 
-
-
         this.add(phoneLabel);
         this.add(phoneNumberField);
         this.add(passwordLabel);
         this.add(passwordField);
         this.add(loginButton);
 
-        loginButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String phoneNumber = phoneNumberField.getText(); // Get phone number from the text field
-                char[] password = passwordField.getPassword();
-                String passStr = new String(password);
-                int type = userService.login(phoneNumber, passStr);
-                loginListener.onLoginResult(type, phoneNumber);
-            }
-        });
+        // Use lambda expression for the action listener of the login button
+        loginButton.addActionListener(e -> handleLoginButtonClick());
+    }
+
+    private void handleLoginButtonClick() {
+        String phoneNumber = phoneNumberField.getText();
+        char[] password = passwordField.getPassword();
+        String passStr = new String(password);
+        int type = userService.login(phoneNumber, passStr);
+        loginListener.onLoginResult(type, phoneNumber);
     }
 }

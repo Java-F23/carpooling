@@ -4,32 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b8177df-ff74-4e24-a32f-7bef060f6ee1" name="Changes" comment="added more test cases">
-      <change afterPath="$PROJECT_DIR$/src/Applications/CaptainApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/AddRideFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/FrameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/LoginFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/LoginListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/LogoutListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/SignUpFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/ViewRideStatisticsFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/WelcomeComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/welcome.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seeders/Seeder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/UserService.java" afterDir="false" />
+    <list default="true" id="2b8177df-ff74-4e24-a32f-7bef060f6ee1" name="Changes" comment="sprint 2">
+      <change afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Applications/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Applications/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/readMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Applications/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Applications/CaptainApplication.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Applications/RiderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Applications/RiderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/FrameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/FrameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/SignUpFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SignUpFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/BaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/BaseUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Captain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Captain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Ride.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/Rider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Rider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositories/GenericRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/GenericRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositories/RideRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/RideRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/CaptainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/CaptainService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/CarService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/RideService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/RideService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/RiderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/RiderService.java" afterDir="false" />
     </list>
@@ -67,10 +59,12 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/elsha/IdeaProjects/ExamPart1&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -103,7 +97,8 @@
       <workItem from="1697982229685" duration="34000" />
       <workItem from="1698323795973" duration="19402000" />
       <workItem from="1698478396028" duration="30715000" />
-      <workItem from="1698610520239" duration="10625000" />
+      <workItem from="1698610520239" duration="10738000" />
+      <workItem from="1698771733690" duration="237000" />
     </task>
     <task id="LOCAL-00001" summary="Added applications">
       <option name="closed" value="true" />
@@ -137,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697387353927</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sprint 2">
+      <option name="closed" value="true" />
+      <created>1698687789120</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698687789120</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added applications" />
     <MESSAGE value="Added Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Readme" />
+    <MESSAGE value="sprint 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="sprint 2" />
   </component>
 </project>

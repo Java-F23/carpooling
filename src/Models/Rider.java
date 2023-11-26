@@ -6,4 +6,9 @@ public class Rider extends  BaseUser{
         super(id, name, email, phoneNumber, password);
         this.riderLoc = riderLoc;
     }
+    public Location getRiderLoc(){
+        return riderLoc;
+    }
+
+
 }

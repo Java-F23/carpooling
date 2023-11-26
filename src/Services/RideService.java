@@ -81,40 +81,7 @@ public class RideService {
 
 
 
-    public void printRidesByRider(Rider rider) {
-        if (rider != null) {
-            ArrayList<Ride> ridesByRider = new ArrayList<>();
-            for (Ride ride : rideRepository.getAll()) {
-                if (ride.getRiders().contains(rider)) {
-                    ridesByRider.add(ride);
-                }
-            }
 
-            if (!ridesByRider.isEmpty()) {
-                System.out.println("Rides booked by rider with ID " + rider.getId() + ":");
-                for (Ride ride : ridesByRider) {
-                    System.out.println("Ride ID: " + ride.getId() + ", Start Time: " + ride.getStartTime());
-                }
-            } else {
-                System.out.println("Rider with ID " + rider.getId() + " has not booked any rides.");
-            }
-        } else {
-            System.out.println("Rider not found.");
-        }
-    }
-
-    public void cancelReservation(int riderId, Ride ride) {
-
-        Rider rider = riderService.getRiderById(riderId);
-        if (rider != null && ride.getRiders().contains(rider)) {
-            int riderIndex = ride.getRiders().indexOf(rider);
-            ride.getRiders().remove(riderIndex);
-            ride.getPayments().remove(riderIndex); // Remove corresponding payment status
-            System.out.println("Reservation canceled successfully.");
-        } else {
-            System.out.println("Rider not found or not booked for this ride.");
-        }
-    }
     public Ride getRideById(int rideId) {
         return rideRepository.getById(rideId);
     }
